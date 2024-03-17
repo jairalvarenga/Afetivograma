@@ -20,7 +20,7 @@ object FrameHumor: TFrameHumor
       TextSettings.FontColor = claWhite
       TextSettings.HorzAlign = Center
       TextSettings.Trimming = None
-      Text = 'Label1'
+      Text = 'lblHumor'
       TabOrder = 0
     end
     object lblPeriodo: TLabel
