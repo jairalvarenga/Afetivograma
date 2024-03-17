@@ -1,0 +1,42 @@
+unit UnitPerfil;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Objects, FMX.Layouts, FMX.Edit;
+
+type
+  TFrmPerfil = class(TForm)
+    rectMenu: TRectangle;
+    Image1: TImage;
+    Label4: TLabel;
+    Layout1: TLayout;
+    edtNome: TEdit;
+    edtSenha: TEdit;
+    edtemail: TEdit;
+    rectAnotar: TRectangle;
+    Label2: TLabel;
+    procedure rectAnotarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPerfil: TFrmPerfil;
+
+implementation
+
+{$R *.fmx}
+
+uses uFrmDM;
+
+procedure TFrmPerfil.rectAnotarClick(Sender: TObject);
+begin
+  FrmDm.AddUsuario(edtNome.Text, edtEmail.Text, edtSenha.Text);
+end;
+
+end.

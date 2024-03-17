@@ -1,0 +1,19 @@
+object FrameTitSomatorio: TFrameTitSomatorio
+  Align = Client
+  Size.Width = 304.000000000000000000
+  Size.Height = 32.000000000000000000
+  Size.PlatformDefault = False
+  object lblTitSoma: TLabel
+    Align = Client
+    StyledSettings = [Family, FontColor]
+    Size.Width = 304.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.Font.StyleExt = {00060000000000000004000000}
+    TextSettings.VertAlign = Trailing
+    TextSettings.Trimming = None
+    Text = 'lblTitSoma'
+    TabOrder = 0
+  end
+end

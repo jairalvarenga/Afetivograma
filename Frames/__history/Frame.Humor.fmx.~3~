@@ -1,0 +1,43 @@
+object FrameHumor: TFrameHumor
+  Align = Client
+  HitTest = False
+  Size.Width = 320.000000000000000000
+  Size.Height = 32.000000000000000000
+  Size.PlatformDefault = False
+  object rectHumor: TRectangle
+    Align = Client
+    Locked = True
+    HitTest = False
+    Size.Width = 320.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object lblHumor: TLabel
+      Align = Client
+      StyledSettings = [Family, Style]
+      Size.Width = 231.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      TextSettings.Trimming = None
+      Text = 'Label1'
+      TabOrder = 0
+    end
+    object lblPeriodo: TLabel
+      Align = Left
+      StyledSettings = [Family]
+      Margins.Left = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Size.Width = 79.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+      TextSettings.FontColor = claWhite
+      TextSettings.Trimming = None
+      Text = 'lblPeriodo'
+      TabOrder = 1
+    end
+  end
+end

@@ -1,0 +1,151 @@
+object FrmDm: TFrmDm
+  OnCreate = DataModuleCreate
+  Height = 325
+  Width = 466
+  PixelsPerInch = 120
+  object FDConnAfetivograma: TFDConnection
+    Params.Strings = (
+      'LockingMode=Normal'
+      'DriverID=SQLite')
+    LoginPrompt = False
+    AfterConnect = FDConnAfetivogramaAfterConnect
+    BeforeConnect = FDConnAfetivogramaBeforeConnect
+    Left = 80
+    Top = 33
+  end
+  object fdqHumor: TFDQuery
+    Connection = FDConnAfetivograma
+    SQL.Strings = (
+      'Select * From Humor')
+    Left = 248
+    Top = 33
+    object fdqHumorHumor_ID: TIntegerField
+      FieldName = 'Humor_ID'
+      Origin = 'Humor_ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object fdqHumorHumor_Desc: TStringField
+      FieldName = 'Humor_Desc'
+      Origin = 'Humor_Desc'
+      Size = 200
+    end
+  end
+  object fdqAux01: TFDQuery
+    Connection = FDConnAfetivograma
+    Left = 384
+    Top = 33
+  end
+  object fdqPerfil: TFDQuery
+    Connection = FDConnAfetivograma
+    SQL.Strings = (
+      'Select * From Perfil')
+    Left = 248
+    Top = 233
+    object fdqPerfilPerfil_ID: TIntegerField
+      FieldName = 'Perfil_ID'
+      Origin = 'Perfil_ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object fdqPerfilPerfil_Nome: TStringField
+      FieldName = 'Perfil_Nome'
+      Origin = 'Perfil_Nome'
+      Size = 100
+    end
+    object fdqPerfilPerfil_Email: TStringField
+      FieldName = 'Perfil_Email'
+      Origin = 'Perfil_Email'
+      Size = 100
+    end
+    object fdqPerfilPerfil_Senha: TStringField
+      FieldName = 'Perfil_Senha'
+      Origin = 'Perfil_Senha'
+      Size = 50
+    end
+    object fdqPerfilPerfil_NomeLogin: TStringField
+      FieldName = 'Perfil_NomeLogin'
+      Origin = 'Perfil_NomeLogin'
+      Size = 50
+    end
+    object fdqPerfilPerfil_CEP: TIntegerField
+      FieldName = 'Perfil_CEP'
+      Origin = 'Perfil_CEP'
+    end
+    object fdqPerfilPerfil_Logradouro: TStringField
+      FieldName = 'Perfil_Logradouro'
+      Origin = 'Perfil_Logradouro'
+      Size = 100
+    end
+    object fdqPerfilPerfil_Complemento: TStringField
+      FieldName = 'Perfil_Complemento'
+      Origin = 'Perfil_Complemento'
+      Size = 50
+    end
+    object fdqPerfilPerfil_Bairro: TStringField
+      FieldName = 'Perfil_Bairro'
+      Origin = 'Perfil_Bairro'
+      Size = 100
+    end
+    object fdqPerfilPerfil_Cidade: TStringField
+      FieldName = 'Perfil_Cidade'
+      Origin = 'Perfil_Cidade'
+      Size = 100
+    end
+    object fdqPerfilPerfil_UF: TStringField
+      FieldName = 'Perfil_UF'
+      Origin = 'Perfil_UF'
+      FixedChar = True
+      Size = 2
+    end
+    object fdqPerfilPerfil_IBGE: TIntegerField
+      FieldName = 'Perfil_IBGE'
+      Origin = 'Perfil_IBGE'
+    end
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 80
+    Top = 128
+  end
+  object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
+    Left = 80
+    Top = 233
+  end
+  object fdqAnotacao: TFDQuery
+    Connection = FDConnAfetivograma
+    SQL.Strings = (
+      'Select a.Anotacao_data, a.Anotacao_Periodo,'
+      '      h.Humor_Desc, a.Anotacao_Obs         '
+      ' From anotacao a left join                 '
+      '      Humor h on h.Humor_ID = a.Humor_ID   ')
+    Left = 248
+    Top = 136
+    object fdqAnotacaoAnotacao_ID: TIntegerField
+      FieldName = 'Anotacao_ID'
+      Origin = 'Anotacao_ID'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+    end
+    object fdqAnotacaoAnotacao_Obs: TWideStringField
+      FieldName = 'Anotacao_Obs'
+      Origin = 'Anotacao_Obs'
+      Size = 100
+    end
+    object fdqAnotacaoHumor_ID: TIntegerField
+      FieldName = 'Humor_ID'
+      Origin = 'Humor_ID'
+    end
+    object fdqAnotacaoAnotacao_Periodo: TWideStringField
+      FieldName = 'Anotacao_Periodo'
+      Origin = 'Anotacao_Periodo'
+      Size = 1
+    end
+    object fdqAnotacaoAnotacao_Med: TWideStringField
+      FieldName = 'Anotacao_Med'
+      Origin = 'Anotacao_Med'
+      Size = 100
+    end
+    object fdqAnotacaoAnotacao_Data: TDateTimeField
+      FieldName = 'Anotacao_Data'
+      Origin = 'Anotacao_Data'
+    end
+  end
+end

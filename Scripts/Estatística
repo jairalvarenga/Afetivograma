@@ -1,0 +1,10 @@
+Select h.humor_Desc, 
+       case when a.anotacao_periodo = 'M' then 'Manhã'
+            when a.anotacao_periodo = 'T' then 'Tarde'
+            else 'Noite'
+       end as perioro, 
+       count(*) as TotPeriodo 
+  From anotacao a join humor h on h.humor_id = a.humor_id
+ Where anotacao_data between '2023-09-01' and '2023-09-30'
+ Group by h.humor_Desc, a.anotacao_periodo
+ Order by a.Anotacao_Periodo,totperiodo Desc

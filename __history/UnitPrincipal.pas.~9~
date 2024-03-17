@@ -1,0 +1,60 @@
+unit UnitPrincipal;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
+  FMX.Objects, FMX.Controls.Presentation, FMX.StdCtrls;
+
+type
+  TFrmPrincipal = class(TForm)
+    rectMenu: TRectangle;
+    Layout1: TLayout;
+    Image1: TImage;
+    Label4: TLabel;
+    rectAnotar: TRectangle;
+    Label1: TLabel;
+    rectAcompanhar: TRectangle;
+    Label5: TLabel;
+    rectConfig: TRectangle;
+    Label6: TLabel;
+    procedure rectAnotarClick(Sender: TObject);
+    procedure rectAcompanharClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmPrincipal: TFrmPrincipal;
+
+implementation
+
+{$R *.fmx}
+
+uses UnitAnotar, UnitAcompanhar;
+
+procedure TFrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := TCloseAction.caFree;
+  FrmPrincipal := nil;
+end;
+
+procedure TFrmPrincipal.rectAcompanharClick(Sender: TObject);
+begin
+  if not Assigned(FrmAcompanhar) then
+    Application.CreateForm(TFrmAcompanhar,FrmAcompanhar);
+  FrmAcompanhar.Show;
+end;
+
+procedure TFrmPrincipal.rectAnotarClick(Sender: TObject);
+begin
+  if not Assigned(FrmAnotar) then
+    Application.CreateForm(TFrmAnotar,FrmAnotar);
+  FrmAnotar.Show;
+end;
+
+end.

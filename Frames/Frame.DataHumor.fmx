@@ -1,0 +1,19 @@
+object FrameDataHumor: TFrameDataHumor
+  Align = Client
+  Size.Width = 348.000000000000000000
+  Size.Height = 32.000000000000000000
+  Size.PlatformDefault = False
+  object lblDataHumor: TLabel
+    Align = Client
+    StyledSettings = [Family, Style]
+    Size.Width = 348.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.FontColor = xFF49AACF
+    TextSettings.VertAlign = Trailing
+    TextSettings.Trimming = None
+    Text = 'lblDataHumor'
+    TabOrder = 0
+  end
+end

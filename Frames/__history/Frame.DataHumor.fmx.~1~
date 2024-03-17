@@ -1,0 +1,19 @@
+object FrameDataHumor: TFrameDataHumor
+  Align = Client
+  Size.Width = 348.000000000000000000
+  Size.Height = 24.000000000000000000
+  Size.PlatformDefault = False
+  object Label1: TLabel
+    Align = Client
+    StyledSettings = [Family, Style]
+    Margins.Left = 10.000000000000000000
+    Size.Width = 338.000000000000000000
+    Size.Height = 24.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 16.000000000000000000
+    TextSettings.FontColor = xFF49AACF
+    TextSettings.Trimming = None
+    Text = 'Label1'
+    TabOrder = 0
+  end
+end

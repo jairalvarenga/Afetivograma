@@ -1,0 +1,36 @@
+object FrameSomatorio: TFrameSomatorio
+  Align = Client
+  Size.Width = 320.000000000000000000
+  Size.Height = 20.000000000000000000
+  Size.PlatformDefault = False
+  object rectSoma: TRectangle
+    Align = Client
+    Size.Width = 320.000000000000000000
+    Size.Height = 20.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object lblHumor: TLabel
+      Align = Client
+      StyledSettings = [Family, Size, Style]
+      Size.Width = 280.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = claWhite
+      TextSettings.Trimming = None
+      Text = 'lblHumor'
+      TabOrder = 1
+    end
+    object lblSoma: TLabel
+      Align = Right
+      StyledSettings = [Family, Size, Style]
+      Position.X = 280.000000000000000000
+      Size.Width = 40.000000000000000000
+      Size.Height = 20.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.FontColor = claWhite
+      TextSettings.Trimming = None
+      Text = 'Label1'
+      TabOrder = 0
+    end
+  end
+end
